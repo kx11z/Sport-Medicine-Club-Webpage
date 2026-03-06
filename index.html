@@ -76,6 +76,7 @@ background:#39ffb3;
 color:#002b1b;
 }
 
+}
 /* ---------------- LAYOUT ---------------- */
 
 .container{
@@ -438,7 +439,7 @@ diagnosis, treatment, and rehabilitation.
 </div>
 
 <div class="resource">
-<a href="Phttps://docs.google.com/presentation/d/1pG2ZDm4HnmgTmGhICaqna3lsdafEReUohFQulnMDs_w/edit" target="_blank">2025/10/02 – Unit 1: Nervous System</a>
+<a href="https://docs.google.com/presentation/d/1pG2ZDm4HnmgTmGhICaqna3lsdafEReUohFQulnMDs_w/edit" target="_blank">2025/10/02 – Unit 1: Nervous System</a>
 </div>
 
 <div class="resource">
@@ -497,15 +498,25 @@ Member Points Spreadsheet
 
 <script>
 
-function openTab(tabName){
+function openTab(event, tabName){
 
-let tabs=document.querySelectorAll(".tab");
+let tabs = document.querySelectorAll(".tab");
 
 tabs.forEach(tab=>{
 tab.classList.remove("active");
 });
 
 document.getElementById(tabName).classList.add("active");
+
+/* update active button */
+
+let buttons = document.querySelectorAll("nav button");
+
+buttons.forEach(btn=>{
+btn.classList.remove("active");
+});
+
+event.currentTarget.classList.add("active");
 
 }
 
