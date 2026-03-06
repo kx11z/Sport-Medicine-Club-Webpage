@@ -6,150 +6,254 @@
 <title>Sports Medicine Club</title>
 
 <style>
+/* ---------------- GLOBAL ---------------- */
 
-/* GENERAL PAGE STYLE */
-
-body{
-    margin:0;
-    font-family:"Segoe UI",Arial,sans-serif;
-    background:#f6faf7;
-    color:#1b2b24;
+*{
+box-sizing:border-box;
 }
 
-/* HEADER */
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:radial-gradient(circle at top,#0c1f26,#07161b);
+color:white;
+min-height:100vh;
+}
+
+/* ---------------- HEADER ---------------- */
 
 header{
-    background:linear-gradient(135deg,#2e8b57,#3fae6a);
-    color:white;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 3px 8px rgba(0,0,0,0.2);
+text-align:center;
+padding:70px 20px 40px;
 }
 
 header h1{
-    margin:0;
-    font-size:2.5em;
+font-size:3rem;
+font-weight:700;
+letter-spacing:1px;
+margin:0;
+color:#39ffb3;
+text-shadow:0 0 12px rgba(57,255,179,0.6);
 }
 
-/* NAVIGATION */
+header p{
+opacity:0.85;
+margin-top:12px;
+font-size:1.1rem;
+}
+
+/* ---------------- NAV ---------------- */
 
 nav{
-    display:flex;
-    justify-content:center;
-    background:#1f6f46;
+display:flex;
+justify-content:center;
+gap:18px;
+margin-bottom:40px;
+flex-wrap:wrap;
 }
 
 nav button{
-    background:none;
-    border:none;
-    color:white;
-    padding:16px 28px;
-    font-size:1em;
-    cursor:pointer;
-    transition:0.25s;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(57,255,179,0.25);
+color:white;
+padding:12px 22px;
+border-radius:12px;
+cursor:pointer;
+font-size:0.95rem;
+transition:.25s;
+backdrop-filter:blur(8px);
 }
 
 nav button:hover{
-    background:#2e8b57;
+background:#39ffb3;
+color:#002b1b;
+transform:translateY(-2px);
+box-shadow:0 0 12px rgba(57,255,179,0.6);
 }
 
-/* CONTENT */
+nav button.active{
+background:#39ffb3;
+color:#002b1b;
+}
+
+/* ---------------- LAYOUT ---------------- */
 
 .container{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
+max-width:1050px;
+margin:auto;
+padding:0 20px 60px;
 }
+
+/* ---------------- CARDS ---------------- */
 
 .card{
-    background:white;
-    border-radius:14px;
-    padding:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    margin-bottom:30px;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(57,255,179,0.2);
+border-radius:16px;
+padding:35px;
+margin-bottom:35px;
+backdrop-filter:blur(14px);
+box-shadow:0 0 25px rgba(57,255,179,0.08);
 }
 
+/* ---------------- UPCOMING MEETING ---------------- */
+
+.meeting-card{
+background:rgba(57,255,179,0.08);
+border:1px solid rgba(57,255,179,0.35);
+border-radius:12px;
+padding:20px;
+margin-bottom:25px;
+box-shadow:0 0 20px rgba(57,255,179,0.15);
+}
+
+/* ---------------- TABS ---------------- */
+
 .tab{
-    display:none;
+display:none;
 }
 
 .tab.active{
-    display:block;
+display:block;
 }
 
-/* TEAM GRID */
+/* ---------------- TEAM ---------------- */
 
 .team-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:20px;
 }
 
 .member{
-    background:#f3faf6;
-    border-radius:12px;
-    padding:20px;
-    text-align:center;
-    border:1px solid #dcefe4;
+background:rgba(255,255,255,0.04);
+border-radius:12px;
+padding:25px;
+text-align:center;
+border:1px solid rgba(57,255,179,0.15);
+transition:.25s;
+}
+
+.member:hover{
+transform:translateY(-6px);
+box-shadow:0 0 18px rgba(57,255,179,0.35);
 }
 
 .member img{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:10px;
+width:85px;
+height:85px;
+border-radius:50%;
+margin-bottom:10px;
+border:3px solid #39ffb3;
 }
 
-/* RESOURCES */
+/* ---------------- RESOURCES ---------------- */
 
 .resource{
-    padding:15px;
-    border-left:5px solid #3fae6a;
-    background:#f1faf4;
-    margin-bottom:12px;
-    border-radius:6px;
+padding:16px;
+margin:12px 0;
+border-radius:10px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(57,255,179,0.15);
+transition:.25s;
+}
+
+.resource:hover{
+background:rgba(57,255,179,0.08);
+transform:translateX(6px);
+box-shadow:0 0 10px rgba(57,255,179,0.3);
 }
 
 .resource a{
-    color:#1f6f46;
-    text-decoration:none;
-    font-weight:bold;
+color:#39ffb3;
+text-decoration:none;
+font-weight:600;
 }
 
 .resource a:hover{
-    text-decoration:underline;
+text-decoration:underline;
 }
 
-/* CONTACT */
+/* ---------------- TEXT ---------------- */
 
-.contact-box{
-    background:#f3faf6;
-    padding:20px;
-    border-radius:10px;
+ul{
+line-height:1.9;
+font-size:1.05rem;
 }
+
+li{
+margin-bottom:6px;
+}
+
+/* ---------------- CONTACT ---------------- */
+
+.contact-box p{
+margin:10px 0;
+}
+
+.contact-box a{
+color:#39ffb3;
+text-decoration:none;
+}
+
+.contact-box a:hover{
+text-decoration:underline;
+}
+
+/* ---------------- FOOTER ---------------- */
 
 footer{
-    text-align:center;
-    padding:20px;
-    color:#555;
+text-align:center;
+opacity:0.6;
+padding:25px;
+font-size:0.9rem;
 }
 
-</style>
-</head>
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:700px){
+
+header h1{
+font-size:2rem;
+}
+
+nav{
+gap:10px;
+}
+
+nav button{
+padding:10px 14px;
+font-size:0.85rem;
+}
+
+.card{
+padding:22px;
+}
+
+.team-grid{
+grid-template-columns:1fr;
+}
+
+}
+</style></head>
 
 <body>
 
 <header>
-<h1>Sports Medicine Club</h1>
-<p>Promoting athlete health, injury prevention, and sports science.</p>
+
+<h1>LHS Sports Medicine Club</h1>
+<p>Exploring injury prevention, athletic performance, and sports science.</p>
+
 </header>
 
 <nav>
-<button onclick="openTab('intro')">Intro</button>
-<button onclick="openTab('team')">Team</button>
-<button onclick="openTab('resources')">Resources</button>
-<button onclick="openTab('contact')">Contact</button>
+
+<button class="active" onclick="openTab(event,'intro')">Intro</button>
+<button onclick="openTab(event,'team')">Team</button>
+<button onclick="openTab(event,'resources')">Resources</button>
+<button onclick="openTab(event,'contact')">Contact</button>
+
 </nav>
 
 <div class="container">
@@ -157,23 +261,76 @@ footer{
 <!-- INTRO -->
 
 <div id="intro" class="tab active">
+
 <div class="card">
+
+<div class="meeting-card">
+
+<h2>Upcoming Meeting</h2>
+
+<p><strong>Date:</strong> INSERT DATE</p>
+<p><strong>Topic:</strong> INSERT TOPIC</p>
+<p><strong>Activity:</strong> INSERT ACTIVITY</p>
+<p><strong>Location:</strong> Dr. Agarwal's Room (022)</p>
+<p><strong>Time:</strong> Thursday Brunch</p>
+
+</div>
+
+<hr style="margin:40px 0; opacity:0.3;">
 
 <h2>About Our Club</h2>
 
-<p>
-The Sports Medicine Club explores the science behind athletic performance,
-injury prevention, and recovery. Members learn about biomechanics,
-physical therapy, rehabilitation, and sports technology.
-</p>
+<p><strong>What is Sports Medicine?</strong></p>
 
 <p>
-Through workshops, collaborations with athletes, and guest speakers,
-our goal is to help students understand how medicine and engineering
-can work together to improve athlete health.
+A branch of medicine focused on sports injuries, including prevention,
+diagnosis, treatment, and rehabilitation.
 </p>
+
+<p><strong>Our Purpose</strong></p>
+
+<ul>
+<li>Educate about the broad field of sports medicine</li>
+<li>Help members maintain personal health</li>
+<li>Provide opportunities to expand knowledge and understanding</li>
+</ul>
+
+<hr style="margin:40px 0; opacity:0.3;">
+
+<h2>Club Points</h2>
+
+<ul>
+<li><strong>1 Meeting = 1 Point</strong></li>
+<li><strong>1 Question of the Week = 1 Point</strong></li>
+</ul>
+
+<p><strong>To be an active member:</strong></p>
+
+<ul>
+<li>18 Points (same as last year)</li>
+</ul>
+
+<p><strong>To receive a club cord:</strong></p>
+
+<ul>
+<li><strong>New seniors:</strong> 22 Points (same as last year)</li>
+<li><strong>Returning members:</strong> Stay active until senior year</li>
+</ul>
+
+<hr style="margin:40px 0; opacity:0.3;">
+
+<h2>Typical Meeting</h2>
+
+<ul>
+<li>Informational slideshow presentation</li>
+<li>Interactive activity</li>
+<li>Kahoot / Gimkit review game</li>
+<li>Guest speaker</li>
+<li>Other fun activities!</li>
+</ul>
 
 </div>
+
 </div>
 
 <!-- TEAM -->
