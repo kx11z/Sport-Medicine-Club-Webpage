@@ -7,21 +7,19 @@
 
 <style>
 
-/* ---------------------------
-GENERAL PAGE STYLE
---------------------------- */
+/* GENERAL PAGE STYLE */
 
 body{
     margin:0;
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #f6faf7;
+    background:#f6faf7;
     color:#1b2b24;
 }
 
 /* Header */
 
 header{
-    background: linear-gradient(135deg,#2e8b57,#3fae6a);
+    background:linear-gradient(135deg,#2e8b57,#3fae6a);
     color:white;
     padding:25px;
     text-align:center;
@@ -33,9 +31,7 @@ header h1{
     font-size:2.5em;
 }
 
-/* ---------------------------
-NAVIGATION BAR
---------------------------- */
+/* NAVIGATION BAR */
 
 nav{
     display:flex;
@@ -57,17 +53,13 @@ nav button:hover{
     background:#2e8b57;
 }
 
-/* ---------------------------
-CONTENT AREA
---------------------------- */
+/* CONTENT AREA */
 
 .container{
     max-width:1000px;
     margin:auto;
     padding:40px 20px;
 }
-
-/* Card style sections */
 
 .card{
     background:white;
@@ -77,21 +69,17 @@ CONTENT AREA
     margin-bottom:30px;
 }
 
-/* Hidden tabs */
+/* TABS */
 
 .tab{
     display:none;
 }
 
-/* Active tab */
-
 .tab.active{
     display:block;
 }
 
-/* ---------------------------
-TEAM GRID
---------------------------- */
+/* TEAM GRID */
 
 .team-grid{
     display:grid;
@@ -115,9 +103,7 @@ TEAM GRID
     margin-bottom:10px;
 }
 
-/* ---------------------------
-RESOURCE LINKS
---------------------------- */
+/* RESOURCE LINKS */
 
 .resource{
     padding:15px;
@@ -137,9 +123,7 @@ RESOURCE LINKS
     text-decoration:underline;
 }
 
-/* ---------------------------
-CONTACT SECTION
---------------------------- */
+/* CONTACT */
 
 .contact-box{
     background:#f3faf6;
@@ -157,47 +141,27 @@ footer{
 </head>
 <body>
 
-
 <header>
 <h1>Sports Medicine Club</h1>
-
-<!-- CHANGE THIS DESCRIPTION -->
 <p>Promoting athlete health, injury prevention, and sports science.</p>
-
 </header>
 
-
-<!-- ---------------------------
-NAVIGATION
---------------------------- -->
-
 <nav>
-
 <button onclick="openTab('intro')">Intro</button>
-
 <button onclick="openTab('team')">Team</button>
-
 <button onclick="openTab('resources')">Resources</button>
-
 <button onclick="openTab('contact')">Contact</button>
-
 </nav>
-
 
 <div class="container">
 
-
-<!-- ---------------------------
-INTRO TAB
---------------------------- -->
+<!-- INTRO -->
 
 <div id="intro" class="tab active">
-
 <div class="card">
 
 <h2>About Our Club</h2>
 
-<!-- EDIT THIS TEXT -->
 <p>
 The Sports Medicine Club explores the science behind athletic performance,
 injury prevention, and recovery. Members learn about biomechanics,
@@ -210,201 +174,124 @@ our goal is to help students understand how medicine and engineering
 can work together to improve athlete health.
 </p>
 
-<!-- YOU CAN ADD PHOTOS OR VIDEOS HERE -->
-
+</div>
 </div>
 
-</div>
-
-
-
-<!-- ---------------------------
-TEAM TAB
---------------------------- -->
+<!-- TEAM -->
 
 <div id="team" class="tab">
-
 <div class="card">
 
 <h2>Meet the Team</h2>
 
 <div class="team-grid">
 
-<!-- MEMBER 1 -->
 <div class="member">
-
-<!-- CHANGE IMAGE -->
 <img src="https://via.placeholder.com/80">
-
-<!-- CHANGE ROLE -->
 <h3>President</h3>
 <p>Michael</p>
-
-<!-- CHANGE DESCRIPTION -->
-<p>Leads the club and organizes for everythin!</p>
-
+<p>Leads the club and organizes everything!</p>
 </div>
 
-
-<!-- MEMBER 2 -->
 <div class="member">
-
 <img src="https://via.placeholder.com/80">
-
 <h3>Vice President</h3>
-
 <p>Derrick</p>
-
 <p>Coordinates projects and partnerships!</p>
-
 </div>
 
-
-<!-- MEMBER 3 -->
 <div class="member">
-
 <img src="https://via.placeholder.com/80">
-
 <h3>Secretary</h3>
-
 <p>Keyi</p>
-
 <p>Organizes member info, sends emails, and more!</p>
-
 </div>
 
-<!-- MEMBER 3 -->
 <div class="member">
-
 <img src="https://via.placeholder.com/80">
-
 <h3>Treasurer</h3>
-
 <p>Sush</p>
-
-<p>In charge of the money and transactions!</p>
-
+<p>In charge of finances and transactions!</p>
 </div>
-<!-- MEMBER 3 -->
+
 <div class="member">
-
 <img src="https://via.placeholder.com/80">
-
-<h3>Public relations</h3>
-
+<h3>Public Relations</h3>
 <p>Chloe</p>
-
-<p>In charge of promoting the club through social media</p>
-
+<p>Promotes the club through social media!</p>
 </div>
 
+</div>
+</div>
+</div>
 
-
-
-<!-- ---------------------------
-RESOURCES TAB
---------------------------- -->
+<!-- RESOURCES -->
 
 <div id="resources" class="tab">
-
 <div class="card">
 
 <h2>Interactive Resources</h2>
 
-<p>
-Explore tools and learning resources related to sports medicine.
-</p>
-
-<!-- ADD LINKS BELOW -->
+<p>Explore tools and learning resources related to sports medicine.</p>
 
 <div class="resource">
-
 <a href="#">Injury Prevention Guide</a>
-
-<!-- EDIT DESCRIPTION -->
 <p>Basic exercises and warm-up techniques for athletes.</p>
-
 </div>
 
-
 <div class="resource">
-
 <a href="#">Biomechanics Simulation</a>
-
 <p>Interactive tool to visualize joint motion and muscle forces.</p>
-
 </div>
-
 
 <div class="resource">
-
 <a href="#">Sports Medicine Research Articles</a>
-
 <p>Collection of articles related to sports science and recovery.</p>
-
-</div>
-
-
-<!-- ADD MORE RESOURCES BY COPYING A RESOURCE BLOCK -->
-
 </div>
 
 </div>
+</div>
 
-
-
-<!-- ---------------------------
-CONTACT TAB
---------------------------- -->
+<!-- CONTACT -->
 
 <div id="contact" class="tab">
-
 <div class="card">
 
 <h2>Contact Us</h2>
 
 <div class="contact-box">
 
-<!-- CHANGE EMAIL -->
 <p><strong>Email:</strong> sportsmedicineofficers@gmail.com</p>
 
-<!-- CHANGE MEETING TIME -->
-<p><strong>Meetings:</strong>Thursdays at Brunch</p>
+<p><strong>Meetings:</strong> Thursdays at Brunch</p>
 
-<!-- CHANGE LOCATION -->
-<p><strong>Location:</strong> Dr. Agarwal's room (022)</p>
+<p><strong>Location:</strong> Dr. Agarwal's Room (022)</p>
 
-<!-- ADD INSTAGRAM OR LINKS -->
-<p><strong>Instagram:</strong> https://www.instagram.com/lhs_sportsmedicine</p>
-<p><strong>Points:</strong> 
-<a href="https://docs.google.com/spreadsheets/d/1IRguh9XTJCXQyidtmNXg4p_WjVd9fI3E_iRPZ0q3ylY/edit?gid=0#gid=0" target="_blank"> Memeber points Spreadsheet</a>
+<p>
+<strong>Instagram:</strong>
+<a href="https://www.instagram.com/lhs_sportsmedicine" target="_blank">
+@lhs_sportsmedicine
+</a>
+</p>
+
+<p>
+<strong>Points:</strong>
+<a href="https://docs.google.com/spreadsheets/d/1IRguh9XTJCXQyidtmNXg4p_WjVd9fI3E_iRPZ0q3ylY/edit?gid=0#gid=0" target="_blank">
+Member Points Spreadsheet
+</a>
 </p>
 
 </div>
-
+</div>
 </div>
 
 </div>
-
-
-
-</div>
-
 
 <footer>
-
-<!-- CHANGE FOOTER TEXT -->
 <p>© Sports Medicine Club</p>
-
 </footer>
 
-
-
 <script>
-
-/* ---------------------------
-TAB SWITCHING SCRIPT
---------------------------- */
 
 function openTab(tabName){
 
@@ -419,7 +306,6 @@ document.getElementById(tabName).classList.add("active");
 }
 
 </script>
-
 
 </body>
 </html>
